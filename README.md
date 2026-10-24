@@ -108,32 +108,32 @@ This is a harmless but annoying `apt` warning that occurs when trying to install
 DeepSeek Harness is not just for the official API; it serves as a powerful frontend for your local open-source models. Here is how to configure your endpoints.
 
 ### 1. Official DeepSeek API
-* When launching the application for the first time, it will prompt you for an API Key[cite: 4].
-* Generate your official key at `https://platform.deepseek.com/api_keys`[cite: 4].
-* Paste the key into the initial setup screen or access it via the local web portal at `http://127.0.0.1:3080`[cite: 4].
+* When launching the application for the first time, it will prompt you for an API Key.
+* Generate your official key at `https://platform.deepseek.com/api_keys`.
+* Paste the key into the initial setup screen or access it via the local web portal at `http://127.0.0.1:3080`.
 
 ### 2. Local Providers (llama.cpp / Ollama / Atomic-AI)
-Ensure your local inference server (like Ollama or llama.cpp) is actively running in the background before proceeding[cite: 4].
+Ensure your local inference server (like Ollama or llama.cpp) is actively running in the background before proceeding.
 
-1. Navigate to **Settings** > **Models**[cite: 4].
-2. Click **+ Add model provider** > **Custom model API**[cite: 4].
+1. Navigate to **Settings** > **Models**.
+2. Click **+ Add model provider** > **Custom model API**.
 3. Configure the provider settings based on your backend:
-   * **Provider ID & Display Name:** Enter `ollama`, `llamacpp`, or `atomic-ai`[cite: 4].
+   * **Provider ID & Display Name:** Enter `ollama`, `llamacpp`, or `atomic-ai`.
    * **Base URL:**
-     * For **llama.cpp**: `http://127.0.0.1:9931/v1`[cite: 4]
-     * For **Ollama**: `http://127.0.0.1:11434/v1`[cite: 4]
-     * For **Atomic-AI**: `http://127.0.0.1:8000/v1`[cite: 4]
-     * For **FreeLLMAPI**: `http://127.0.0.1:31415/v1`[cite: 4]
-   * **API Protocol:** Select `openai-completions`[cite: 4].
-   * **API Key:** Enter your specific key (e.g., `freellmapi-**********` for FreeLLMAPI) or simply the provider name for local unrestricted servers[cite: 4].
-4. Click **Fetch available models** and select your loaded local model (e.g., `q3.8-Flash`)[cite: 4].
-5. Click **Create Provider** and close the settings[cite: 4].
+     * For **llama.cpp**: `http://127.0.0.1:9931/v1`
+     * For **Ollama**: `http://127.0.0.1:11434/v1`
+     * For **Atomic-AI**: `http://127.0.0.1:8000/v1`
+     * For **FreeLLMAPI**: `http://127.0.0.1:31415/v1`
+   * **API Protocol:** Select `openai-completions`.
+   * **API Key:** Enter your specific key (e.g., `freellmapi-**********` for FreeLLMAPI) or simply the provider name for local unrestricted servers.
+4. Click **Fetch available models** and select your loaded local model (e.g., `q3.8-Flash`).
+5. Click **Create Provider** and close the settings.
 
 ### 3. Starting a Local Workspace Session
 To interact with your newly connected models:
-1. Click **New Session** and select **Add workspace** (the folder icon)[cite: 4].
-2. Choose a local directory to serve as your workspace environment[cite: 4].
-3. In the chat window, select your local model from the dropdown menu and start prompting[cite: 4]!
+1. Click **New Session** and select **Add workspace** (the folder icon).
+2. Choose a local directory to serve as your workspace environment.
+3. In the chat window, select your local model from the dropdown menu and start prompting!
 
 
 ---
