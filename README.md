@@ -132,7 +132,7 @@ DeepSeek Harness is not just for the official API; it serves as a powerful front
 * Generate your official key at `https://platform.deepseek.com/api_keys`.
 * Paste the key into the initial setup screen or access it via the local web portal at `http://127.0.0.1:3080`.
 
-### 2. Local Providers (llama.cpp / Ollama / Atomic-AI) --> examples
+### 2. Local Providers (llama.cpp / Ollama / Atomic-AI / FreeLLMAPI) --> examples
 Ensure your local inference server (like Ollama or llama.cpp) is actively running in the background before proceeding.
 
 1. Navigate to **Settings** > **Models**.
