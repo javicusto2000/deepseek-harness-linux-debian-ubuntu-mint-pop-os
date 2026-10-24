@@ -5,6 +5,8 @@
 [![DE: KDE Plasma](https://img.shields.io/badge/DE-KDE_Plasma-informational.svg)](https://kde.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+> ⚡ **Upstream Sync Status:** Tracking the latest official release **v0.2.1-rc.3** (Compiled and packaged just hours after the official DeepSeek update, including the newest V4.1-Flash model support).
+
 A community-driven, native Linux packaging of the official [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). This project provides a pre-compiled `.deb` installer strictly optimized for modern Debian-based distributions running **Wayland**, bringing the full DeepSeek AI desktop experience to the Linux ecosystem with proper window management and system integration.
 
 ## 🌟 Why this project? (Features & Benefits)
