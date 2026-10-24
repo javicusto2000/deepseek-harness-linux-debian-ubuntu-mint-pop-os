@@ -30,6 +30,8 @@ Unlike generic Linux builds that often result in broken window associations or b
 * **Task Manager Grouping Fix:** We resolved the notorious "Generic Wayland Icon (W)" bug. By strictly mapping the internal Electron `app.name` to the `StartupWMClass` (`deepseek-ai-dsh-desktop`), your OS task manager will instantly recognize the process, correctly grouping the active window under the official high-resolution DeepSeek icon.
 
 
+### 📸 Screenshot:![DeepSeek on Debian KDE](deepseek-harnes-sdesktop-debian13.png)
+
 ---
 # DeepSeek Harness Desktop - Unofficial Linux Build 🐧
 
