@@ -103,6 +103,25 @@ This is a harmless but annoying `apt` warning that occurs when trying to install
 
 
 ---
+# 🧹 Clean Uninstallation
+
+To completely remove the application, the custom icon, and restore your system caches, run:
+
+```bash
+# Remove the package
+sudo apt remove --purge -y deepseek-harness
+
+# Remove the injected icon
+sudo rm -f /usr/share/pixmaps/deepseek-harness.png
+
+# Refresh the desktop database
+sudo update-desktop-database /usr/share/applications/
+
+# If you also want to delete your local user configurations, saved sessions, and cached AI data:
+rm -rf ~/.config/deepseek-harness
+
+
+---
 ## 🔌 Connecting AI Providers (Local & Cloud)
 
 DeepSeek Harness is not just for the official API; it serves as a powerful frontend for your local open-source models. Here is how to configure your endpoints.
@@ -134,22 +153,3 @@ To interact with your newly connected models:
 1. Click **New Session** and select **Add workspace** (the folder icon).
 2. Choose a local directory to serve as your workspace environment.
 3. In the chat window, select your local model from the dropdown menu and start prompting!
-
-
----
-# 🧹 Clean Uninstallation
-
-To completely remove the application, the custom icon, and restore your system caches, run:
-
-```bash
-# Remove the package
-sudo apt remove --purge -y deepseek-harness
-
-# Remove the injected icon
-sudo rm -f /usr/share/pixmaps/deepseek-harness.png
-
-# Refresh the desktop database
-sudo update-desktop-database /usr/share/applications/
-
-# If you also want to delete your local user configurations, saved sessions, and cached AI data:
-rm -rf ~/.config/deepseek-harness
