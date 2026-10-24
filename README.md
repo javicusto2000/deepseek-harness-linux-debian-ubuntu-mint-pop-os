@@ -55,7 +55,7 @@ This repository solves these issues transparently by providing:
 **Important:** This `.deb` package was compiled on **Debian 13 (Trixie)** and relies on the modern `t64` ABI transition libraries.
 *   **Supported OS:** Debian 13+, Ubuntu 24.04 LTS+, Linux Mint 22+, or any modern derivative using `t64` libraries (e.g., `libasound2t64`, `libgtk-3-0t64`).
 *   **Display Server:** Optimized for **Wayland**. *(Note: X11 users can still use it, but will need to remove the `--ozone-platform=wayland` flag from the `/usr/share/applications/deepseek-harness.desktop` file after installation).*
-
+rm -rf ~/.config/deepseek-harness
 ---
 
 ## 🚀 Quick Install (Pre-compiled Binary)
@@ -66,7 +66,8 @@ This repository solves these issues transparently by providing:
    echo "395a9be5b0b22403b095d2ca09e589b8f0f46a948fe62f06ceaeead208a05be0  deepseek-harness-0.2.1-rc.3-linux-amd64-unsigned.deb deepseek-harness-0.2.1-rc.3-linux-amd64-unsigned.deb" | sha256sum --check
 
 
-### 📊 Compatibility Matrix
+---
+# 📊 Compatibility Matrix
 
 This build specifically targets the recent `t64` ABI transition (64-bit time_t) adopted by modern Linux distributions. 
 
@@ -94,7 +95,7 @@ This is a harmless but annoying `apt` warning that occurs when trying to install
 * **Expected behavior:** The official in-app auto-updater is disabled in this Linux build. The upstream DeepSeek release servers currently only provide OTA (Over-The-Air) updates for macOS and Windows. You will need to manually download and install future `.deb` releases from this repository.
 
 
-### 🧹 Clean Uninstallation
+## 🧹 Clean Uninstallation
 
 To completely remove the application, the custom icon, and restore your system caches, run:
 
