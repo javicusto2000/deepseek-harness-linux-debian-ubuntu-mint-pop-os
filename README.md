@@ -1,11 +1,11 @@
 
-### 🤝 Contributing & Community
+## 🤝 Contributing & Community
 This project was born out of a passion for bringing cutting-edge AI tools to the Linux ecosystem natively. Whether you are running a multi-boot local AI rig, testing models with `llama.cpp` or Ollama, or just love Debian, you are welcome here. 
 
 If you find a bug, want to improve the patch script for other distributions (like Fedora/Arch), or have suggestions for better desktop integration, feel free to open an **Issue** or submit a **Pull Request**. Let's keep the Linux AI ecosystem thriving!
 
 
-### 🛡️ Security, Transparency, and Supply Chain
+## 🛡️ Security, Transparency, and Supply Chain
 Trust is paramount in open-source AI tooling. This repository is built on a philosophy of absolute transparency:
 * **Zero Source Code Tampering:** We do not touch, modify, or distribute any proprietary logic, weights, or AI models. The build process strictly fetches the untouched source from the official DeepSeek AI repository.
 * **Auditable Patching:** The `patch-linux.mjs` script is provided fully open-source and heavily commented. You can read exactly what it modifies before executing it.
