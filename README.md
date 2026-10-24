@@ -1,4 +1,5 @@
 
+---
 # 🤝 Contributing & Community
 This project was born out of a passion for bringing cutting-edge AI tools to the Linux ecosystem natively. Whether you are running a multi-boot local AI rig, testing models with `llama.cpp` or Ollama, or just love Debian, you are welcome here. 
 
@@ -29,6 +30,7 @@ Unlike generic Linux builds that often result in broken window associations or b
 * **Task Manager Grouping Fix:** We resolved the notorious "Generic Wayland Icon (W)" bug. By strictly mapping the internal Electron `app.name` to the `StartupWMClass` (`deepseek-ai-dsh-desktop`), your OS task manager will instantly recognize the process, correctly grouping the active window under the official high-resolution DeepSeek icon.
 
 
+---
 # DeepSeek Harness Desktop - Unofficial Linux Build 🐧
 
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-yellow.svg)](https://kernel.org)
@@ -81,6 +83,7 @@ This build specifically targets the recent `t64` ABI transition (64-bit time_t) 
 | **Ubuntu** | 22.04 LTS & older | `amd64` | - | 🔴 Unsupported | Legacy dependencies (`libgtk-3-0` instead of `libgtk-3-0t64`). |
 
 
+---
 ### 🚑 Troubleshooting & FAQ
 
 **1. The application crashes on startup or the window doesn't render (X11 Users)**
