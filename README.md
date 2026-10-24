@@ -1,5 +1,5 @@
 
-## 🤝 Contributing & Community
+# 🤝 Contributing & Community
 This project was born out of a passion for bringing cutting-edge AI tools to the Linux ecosystem natively. Whether you are running a multi-boot local AI rig, testing models with `llama.cpp` or Ollama, or just love Debian, you are welcome here. 
 
 If you find a bug, want to improve the patch script for other distributions (like Fedora/Arch), or have suggestions for better desktop integration, feel free to open an **Issue** or submit a **Pull Request**. Let's keep the Linux AI ecosystem thriving!
