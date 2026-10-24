@@ -119,10 +119,11 @@ sudo update-desktop-database /usr/share/applications/
 
 # If you also want to delete your local user configurations, saved sessions, and cached AI data:
 rm -rf ~/.config/deepseek-harness
+```
 
 
 ---
-## 🔌 Connecting AI Providers (Local & Cloud)
+# 🔌 Connecting AI Providers (Local & Cloud)
 
 DeepSeek Harness is not just for the official API; it serves as a powerful frontend for your local open-source models. Here is how to configure your endpoints.
 
@@ -131,7 +132,7 @@ DeepSeek Harness is not just for the official API; it serves as a powerful front
 * Generate your official key at `https://platform.deepseek.com/api_keys`.
 * Paste the key into the initial setup screen or access it via the local web portal at `http://127.0.0.1:3080`.
 
-### 2. Local Providers (llama.cpp / Ollama / Atomic-AI)
+### 2. Local Providers (llama.cpp / Ollama / Atomic-AI) --> examples
 Ensure your local inference server (like Ollama or llama.cpp) is actively running in the background before proceeding.
 
 1. Navigate to **Settings** > **Models**.
@@ -139,10 +140,10 @@ Ensure your local inference server (like Ollama or llama.cpp) is actively runnin
 3. Configure the provider settings based on your backend:
    * **Provider ID & Display Name:** Enter `ollama`, `llamacpp`, or `atomic-ai`.
    * **Base URL:**
-     * For **llama.cpp**: `http://127.0.0.1:9931/v1`
-     * For **Ollama**: `http://127.0.0.1:11434/v1`
-     * For **Atomic-AI**: `http://127.0.0.1:8000/v1`
-     * For **FreeLLMAPI**: `http://127.0.0.1:31415/v1`
+     * For **llama.cpp**: `http://127.0.0.1:9931/v1`    #example
+     * For **Ollama**: `http://127.0.0.1:11434/v1`      #example
+     * For **Atomic-AI**: `http://127.0.0.1:8000/v1`    #example
+     * For **FreeLLMAPI**: `http://127.0.0.1:31415/v1`  #excample
    * **API Protocol:** Select `openai-completions`.
    * **API Key:** Enter your specific key (e.g., `freellmapi-**********` for FreeLLMAPI) or simply the provider name for local unrestricted servers.
 4. Click **Fetch available models** and select your loaded local model (e.g., `q3.8-Flash`).
