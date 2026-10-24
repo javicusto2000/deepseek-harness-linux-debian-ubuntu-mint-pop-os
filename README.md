@@ -140,10 +140,10 @@ Ensure your local inference server (like Ollama or llama.cpp) is actively runnin
 3. Configure the provider settings based on your backend:
    * **Provider ID & Display Name:** Enter `ollama`, `llamacpp`, or `atomic-ai`.
    * **Base URL:**
-     * For **llama.cpp**: `http://127.0.0.1:9931/v1`    #example
-     * For **Ollama**: `http://127.0.0.1:11434/v1`      #example
-     * For **Atomic-AI**: `http://127.0.0.1:8000/v1`    #example
-     * For **FreeLLMAPI**: `http://127.0.0.1:31415/v1`  #excample
+     * For **llama.cpp**: `http://127.0.0.1:9931/v1`        #example
+     * For **Ollama**: `http://127.0.0.1:11434/v1`          #example
+     * For **Atomic-AI**: `http://127.0.0.1:8000/v1`        #example
+     * For **FreeLLMAPI**: `http://127.0.0.1:31415/v1`      #example
    * **API Protocol:** Select `openai-completions`.
    * **API Key:** Enter your specific key (e.g., `freellmapi-**********` for FreeLLMAPI) or simply the provider name for local unrestricted servers.
 4. Click **Fetch available models** and select your loaded local model (e.g., `q3.8-Flash`).
