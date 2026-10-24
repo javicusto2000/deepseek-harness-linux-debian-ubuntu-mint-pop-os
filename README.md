@@ -32,6 +32,8 @@ Unlike generic Linux builds that often result in broken window associations or b
 
 ### 📸 Screenshot:![DeepSeek on Debian KDE](deepseek-harnes-sdesktop-debian13.png)
 
+### 📸 Screenshot:![DeepSeek on Debian KDE](deepseek-harnes-sdesktop-debian13-providers.png)
+
 ---
 # DeepSeek Harness Desktop - Unofficial Linux Build 🐧
 
