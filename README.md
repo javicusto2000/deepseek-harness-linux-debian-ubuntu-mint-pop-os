@@ -64,3 +64,49 @@ This repository solves these issues transparently by providing:
 2. **Verify the checksum** for security (Replace `395a9be5b0b22403b095d2ca09e589b8f0f46a948fe62f06ceaeead208a05be0  deepseek-harness-0.2.1-rc.3-linux-amd64-unsigned.deb` with the one provided in the release notes):
    ```bash
    echo "395a9be5b0b22403b095d2ca09e589b8f0f46a948fe62f06ceaeead208a05be0  deepseek-harness-0.2.1-rc.3-linux-amd64-unsigned.deb deepseek-harness-0.2.1-rc.3-linux-amd64-unsigned.deb" | sha256sum --check
+
+
+### 📊 Compatibility Matrix
+
+This build specifically targets the recent `t64` ABI transition (64-bit time_t) adopted by modern Linux distributions. 
+
+| Distribution | Version | Architecture | Display Server | Status | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Debian** | 13 (Trixie) / Testing | `amd64` | Wayland / X11 | 🟢 Supported | Native build environment. |
+| **Ubuntu** | 24.04 LTS & newer | `amd64` | Wayland / X11 | 🟢 Supported | Perfectly matches `t64` dependencies. |
+| **Linux Mint** | 22 & newer | `amd64` | Wayland / X11 | 🟢 Supported | Based on Ubuntu 24.04 core. |
+| **Pop!_OS** | 24.04 | `amd64` | Wayland / X11 | 🟢 Supported | Cosmic/GNOME Wayland compatible. |
+| **Debian** | 12 (Bookworm) & older | `amd64` | - | 🔴 Unsupported | Lacks `t64` ABI transition libraries. |
+| **Ubuntu** | 22.04 LTS & older | `amd64` | - | 🔴 Unsupported | Legacy dependencies (`libgtk-3-0` instead of `libgtk-3-0t64`). |
+
+
+### 🚑 Troubleshooting & FAQ
+
+**1. The application crashes on startup or the window doesn't render (X11 Users)**
+This build is strictly pre-configured and optimized for **Wayland**. If you are using a legacy X11 session, the `--ozone-platform=wayland` flag will cause a crash.
+* **The Fix:** Edit the desktop entry: `sudo nano /usr/share/applications/deepseek-harness.desktop` and carefully remove the `--enable-features=UseOzonePlatform --ozone-platform=wayland` parameters from the `Exec=` line.
+
+**2. Error during `apt install`: "Download is performed unsandboxed as root"**
+This is a harmless but annoying `apt` warning that occurs when trying to install local `.deb` files directly from directories where the `_apt` user lacks read permissions (like your `~/Downloads` folder).
+* **The Fix:** Always copy the `.deb` file to the `/tmp` directory before installing, exactly as detailed in the Quick Install guide.
+
+**3. Why isn't the Auto-Updater working?**
+* **Expected behavior:** The official in-app auto-updater is disabled in this Linux build. The upstream DeepSeek release servers currently only provide OTA (Over-The-Air) updates for macOS and Windows. You will need to manually download and install future `.deb` releases from this repository.
+
+
+### 🧹 Clean Uninstallation
+
+To completely remove the application, the custom icon, and restore your system caches, run:
+
+```bash
+# Remove the package
+sudo apt remove --purge -y deepseek-harness
+
+# Remove the injected icon
+sudo rm -f /usr/share/pixmaps/deepseek-harness.png
+
+# Refresh the desktop database
+sudo update-desktop-database /usr/share/applications/
+
+# If you also want to delete your local user configurations, saved sessions, and cached AI data:
+rm -rf ~/.config/deepseek-harness
