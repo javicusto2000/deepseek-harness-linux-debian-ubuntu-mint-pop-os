@@ -95,7 +95,8 @@ This is a harmless but annoying `apt` warning that occurs when trying to install
 * **Expected behavior:** The official in-app auto-updater is disabled in this Linux build. The upstream DeepSeek release servers currently only provide OTA (Over-The-Air) updates for macOS and Windows. You will need to manually download and install future `.deb` releases from this repository.
 
 
-## 🧹 Clean Uninstallation
+---
+# 🧹 Clean Uninstallation
 
 To completely remove the application, the custom icon, and restore your system caches, run:
 
